@@ -1,0 +1,257 @@
+/*rem and em do NOT depent on html font-size*/
+
+/***************/
+/*BELOW 1344px* (smaller-desktops)/
+/***************/
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .main-nav-list {
+    gap: 2.4rem;
+  }
+}
+
+/***************/
+/*BELOW 1200px* (Landscape Tablets)/
+/***************/
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+  .header {
+    padding: 0 3.2rem;
+  }
+  .main-nav-list {
+    gap: 2.2rem;
+  }
+  .hero {
+    gap: 4.8rem;
+  }
+}
+/***************/
+/*BELOW 944px* (Tablets)/
+/***************/
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  .main-nav-list {
+    gap: 1.6rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 1.8rem;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+  }
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+  .educated-students {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+  .logos img {
+    height: 5.2rem;
+  }
+  .team-number {
+    font-size: 7.4rem;
+  }
+  .course-title {
+    font-size: 1.8rem;
+  }
+  .grid {
+    gap: 3.2rem;
+  }
+  .team-description {
+    line-height: 1.6;
+  }
+  /*MOBILE NAV*/
+  .btn-mobile-nav {
+    display: block;
+    /* z-index: 1000; */
+  }
+  .main-nav {
+    background-color: rgba(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /*hide the navigation*/
+    /*1. Hide the element*/
+    opacity: 0;
+    /*2. Make it unaccsessible to mouse and keyboard*/
+    pointer-events: none;
+    /*3. Hide from screen readers*/
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+    margin-top: 16rem;
+    margin-left: 12rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/***************/
+/*BELOW 704px* (Small Tablets)/
+/***************/
+@media (max-width: 44em) {
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+  .logos img {
+    height: 4.4rem;
+  }
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .logo-col,
+  .adress-col {
+    grid-column: span 3;
+  }
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+  .testimonial::before {
+    font-size: 10rem;
+    top: 10rem;
+  }
+  .testimonial__header {
+    text-align: center;
+  }
+  .testimonial__text {
+    font-size: 1.6rem;
+    margin-bottom: 3.5rem;
+  }
+  .testimonial__author {
+    justify-content: center;
+    grid-template-columns: 6.5rem 16.5rem;
+  }
+  .testimonial__photo {
+    width: 4.8rem;
+  }
+  .slider__btn {
+    top: 55%;
+  }
+  .dots {
+    bottom: 25%;
+  }
+}
+
+/***************/
+/*BELOW 544px* (Phones)/
+/***************/
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+  .grid--2-cols,
+  .grid--3-cols {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 3.2rem;
+  }
+  .section-hero {
+    padding: 2.4rem 0 4.8rem 0;
+  }
+  .hero-img {
+    width: 80%;
+  }
+  .logos img {
+    height: 3rem;
+  }
+  .team-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+  .team-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .team-img {
+    width: 50%;
+  }
+  .team-img-box::after {
+    width: 45%;
+    padding-bottom: 50%;
+    top: 75%;
+    left: 35%;
+  }
+
+  .team-number {
+    font-size: 4.4rem;
+    padding-top: 1rem;
+  }
+  .heading-tertiary {
+    font-size: 2rem;
+  }
+  .text-icon {
+    height: 2.6rem;
+    width: 2.6rem;
+  }
+  .course-content {
+    padding: 2rem 5rem;
+  }
+  .testimonial {
+    padding: 1rem 2rem;
+  }
+  .slider__btn {
+    height: 4.6rem;
+    width: 4.6rem;
+  }
+  .logo {
+    height: 5.6rem;
+  }
+}
